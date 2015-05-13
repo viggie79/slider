@@ -29,8 +29,11 @@ function next() {
 	newSlide=sliderInt+1;
 	showSlide(newSlide);
 }
-
+function stopLoop() {
+	window.clearInterval(loop);
+}
 function showSlide(id){
+	stopLoop();
 	if(id>count) {
 			id=1;
 		}
@@ -41,4 +44,15 @@ function showSlide(id){
 		$("#slider img#"+id).fadeIn(300);
 		sliderInt=id;
 		sliderNext=id+1;
+		startSlider();
 }
+
+$("#slider img").hover(
+function () {
+	stopLoop();
+},
+function () {
+	startSlider();
+}
+)
+
