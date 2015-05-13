@@ -19,16 +19,16 @@ function startSlider(){
 		sliderNext=sliderNext+1;
 	},3000)
 }
-/*
+
 function prev() {
 	newSlide=sliderInt-1;
 	showSlide(newSlide);
-};
+}
 
 function next() {
 	newSlide=sliderInt+1;
 	showSlide(newSlide);
-});
+}
 
 function showSlide(id){
 	if(id>count) {
@@ -42,4 +42,3 @@ function showSlide(id){
 		sliderInt=id;
 		sliderNext=id+1;
 }
-*/
